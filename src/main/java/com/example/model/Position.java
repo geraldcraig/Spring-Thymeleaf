@@ -1,4 +1,4 @@
-package com.example.roomwebapp.model;
+package com.example.model;
 
 public enum Position {
     HOUSEKEEPING, FRONT_DESK, SECURITY, CONCIERGE;

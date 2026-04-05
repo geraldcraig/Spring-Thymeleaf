@@ -1,6 +1,6 @@
-package com.example.roomwebapp.repository;
+package com.example.repository;
 
-import com.example.roomwebapp.model.RoomEntity;
+import com.example.model.RoomEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

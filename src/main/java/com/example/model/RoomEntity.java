@@ -1,4 +1,4 @@
-package com.example.roomwebapp.model;
+package com.example.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

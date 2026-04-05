@@ -1,9 +1,9 @@
-package com.example.roomwebapp.controller;
+package com.example.controller;
 
-import com.example.roomwebapp.model.Room;
-import com.example.roomwebapp.model.Staff;
-import com.example.roomwebapp.model.StaffMember;
-import com.example.roomwebapp.repository.StaffRepository;
+import com.example.model.Room;
+import com.example.model.Staff;
+import com.example.model.StaffMember;
+import com.example.repository.StaffRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
