@@ -1,39 +1,32 @@
 package com.example.model;
 
-import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
-//@Getter
-//@Setter
-//@AllArgsConstructor
-//@NoArgsConstructor
+@Entity
+@Table(name="ROOMS")
 public class Room {
-    private UUID id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name="ROOM_ID")
+    private UUID roomId;
+
+    @Column(name="NAME")
     private String name;
+
+    @Column(name="NUMBER")
     private String number;
-    private String info;
 
-    public Room() {
+    @Column(name="BED_INFO")
+    private String bedInfo;
+
+    public UUID getRoomId() {
+        return roomId;
     }
 
-    public Room(UUID id, String name, String number, String info) {
-        this.id = id;
-        this.name = name;
-        this.number = number;
-        this.info = info;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
+    public void setRoomId(UUID roomId) {
+        this.roomId = roomId;
     }
 
     public String getName() {
@@ -52,11 +45,21 @@ public class Room {
         this.number = number;
     }
 
-    public String getInfo() {
-        return info;
+    public String getBedInfo() {
+        return bedInfo;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setBedInfo(String bedInfo) {
+        this.bedInfo = bedInfo;
+    }
+
+    @Override
+    public String toString() {
+        return "RoomEntity{" +
+                "roomId=" + roomId +
+                ", name='" + name + '\'' +
+                ", number='" + number + '\'' +
+                ", bedInfo='" + bedInfo + '\'' +
+                '}';
     }
 }

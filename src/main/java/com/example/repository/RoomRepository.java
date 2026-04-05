@@ -1,9 +1,9 @@
 package com.example.repository;
 
-import com.example.model.RoomEntity;
+import com.example.model.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface RoomRepository extends JpaRepository<RoomEntity, UUID> {
+public interface RoomRepository extends JpaRepository<Room, UUID> {
 }

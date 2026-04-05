@@ -1,29 +1,43 @@
 package com.example.model;
 
+import jakarta.persistence.*;
+
 import java.util.UUID;
 
+@Entity
+@Table(name="EMPLOYEES")
 public class Staff {
-    private UUID id;
+
+    @Id
+    @Column(name = "EMPLOYEE_ID")
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID employeeId;
+
+    @Column(name = "FIRST_NAME")
     private String firstName;
+
+    @Column(name = "LAST_NAME")
     private String lastName;
+
+    @Column(name = "POSITION")
     private String position;
 
     public Staff() {
     }
 
-    public Staff(UUID id, String firstName, String lastName, String position) {
-        this.id = id;
+    public Staff(UUID employeeId, String firstName, String lastName, String position) {
+        this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
     }
 
-    public UUID getId() {
-        return id;
+    public UUID getEmployeeId() {
+        return employeeId;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setEmployeeId(UUID employeeId) {
+        this.employeeId = employeeId;
     }
 
     public String getFirstName() {
