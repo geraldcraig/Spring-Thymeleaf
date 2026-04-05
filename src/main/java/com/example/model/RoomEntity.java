@@ -25,6 +25,16 @@ public class RoomEntity {
     @Column(name="BED_INFO")
     private String bedInfo;
 
+    public RoomEntity() {
+    }
+
+    public RoomEntity(UUID roomId, String name, String number, String bedInfo) {
+        this.roomId = roomId;
+        this.name = name;
+        this.number = number;
+        this.bedInfo = bedInfo;
+    }
+
     public UUID getRoomId() {
         return roomId;
     }
