@@ -1,7 +1,6 @@
 package com.example.service;
 
 import com.example.model.Room;
-import com.example.model.RoomEntity;
 import com.example.repository.RoomRepository;
 import org.springframework.stereotype.Service;
 

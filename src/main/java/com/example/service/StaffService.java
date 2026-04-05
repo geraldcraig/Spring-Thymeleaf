@@ -1,8 +1,6 @@
 package com.example.service;
 
-import com.example.model.Position;
 import com.example.model.Staff;
-import com.example.model.StaffMember;
 import com.example.repository.StaffRepository;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
