@@ -26,7 +26,7 @@ public class RoomService {
         return rooms;
     }
 
-    public Room getRoomsById(UUID id) {
+    public Room getRoomById(UUID id) {
         Optional<RoomEntity> entity = roomRepository.findById(id);
         if (entity.isEmpty()) {
             return null;
